@@ -48,7 +48,7 @@
 							<th>Nama</th>
 							<th>Keterangan</th>
 							<th>Ubah</th>
-							<th>Hapus</th>
+							<!--<th>Hapus</th>-->
 						</tr>
 					</thead>
 					<tbody>
@@ -60,7 +60,7 @@
 								<td><?php echo $data->kategori_nama; ?></td>
 								<td><?php echo $data->kategori_keterangan; ?></td>
 								<td><a class="edit" href="<?= site_url(); ?>back_end/Kategori/edit/<?= $data->kategori_id ?>"><button class="btn btn-success"><i class="feather icon-edit"></i></button></a></td>
-								<td><a class="delete" onclick="deleteConfirm('<?= site_url(); ?>back_end/Kategori/delete/<?= $data->kategori_id ?>')" href="#!"><button class="btn btn-danger"><i class="feather icon-trash"></i></button></a></td>
+								<!--<td><a class="delete" onclick="deleteConfirm('<?= site_url(); ?>back_end/Kategori/delete/<?= $data->kategori_id ?>')" href="#!"><button class="btn btn-danger"><i class="feather icon-trash"></i></button></a></td>-->
 							</tr>
 						<?php endforeach; ?>
 					</tbody>

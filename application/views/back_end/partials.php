@@ -23,6 +23,10 @@
     <link href="<?php echo base_url('assets/back_end/css/apis.css') ?>" rel="stylesheet">
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/bootstrap/css/bootstrap.min.css') ?>">
+    <!-- sweet alert framework -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/sweetalert/css/sweetalert.css') ?>">
+    <!-- animation nifty modal window effects css -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/css/component.css') ?>">
     <!-- themify-icons line icon -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/icon/themify-icons/themify-icons.css') ?>">
     <!-- Select 2 css -->
@@ -42,6 +46,7 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/css/style.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/css/jquery.mCustomScrollbar.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/back_end/fancybox/jquery.fancybox.min.css') ?>" />
 </head>
 
 <body>
@@ -342,12 +347,12 @@
                                             </a>
                                             <ul class="pcoded-submenu">
                                                 <li class="">
-                                                    <a href="<?php echo base_url('back_end/Premium') ?>">
+                                                    <a href="<?php echo base_url('back_end/produk/Premium') ?>">
                                                         <span class="pcoded-mtext">Premium</span>
                                                     </a>
                                                 </li>
                                                 <li class="">
-                                                    <a href="<?php echo base_url('back_end/Ukm') ?>">
+                                                    <a href="<?php echo base_url('back_end/produk/Ukm') ?>">
                                                         <span class="pcoded-mtext">UKM / Lainnya</span>
                                                     </a>
                                                 </li>
@@ -481,6 +486,14 @@
     <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/modernizr/js/modernizr.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/modernizr/js/css-scrollbars.js') ?>"></script>
 
+    <!-- sweet alert js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/sweetalert/js/sweetalert.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/modal.js') ?>"></script>
+    <!-- sweet alert modal.js intialize js -->
+    <!-- modalEffects js nifty modal window effects -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/modalEffects.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/classie.js') ?>"></script>
+
     <!-- data-table js -->
     <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
     <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js') ?>"></script>
@@ -523,8 +536,11 @@
     <script src="<?php echo base_url('assets/back_end/js/vartical-layout.min.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/back_end/pages/dashboard/custom-dashboard.js') ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/script.min.js') ?>"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="<?php echo base_url('assets/back_end/js/gtagmanager.js') ?>"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="<?php echo base_url('assets/back_end/js/gtagmanager.js') ?>"></script>
+
+    <script src="<?php echo base_url('assets/back_end/ckeditor/ckeditor.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/fancybox/jquery.fancybox.min.js') ?>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

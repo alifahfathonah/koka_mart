@@ -24,9 +24,9 @@
   <link href="<?php echo base_url('assets/back_end/login/css/fontgapis.css') ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/back_end/login/css/fontqiucksand.css') ?>" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/back_end/login/css/bootstrap.min.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/bootstrap.min.css') ?>">
 
-  <link rel="stylesheet" href="<?php echo base_url('assets/back_end/back_end/login/css/waves.min.css') ?>" type="text/css" media="all">
+  <link rel="stylesheet" href="<?php echo base_url('assets/back_end/login/css/waves.min.css') ?>" type="text/css" media="all">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/feather.css') ?>">
 
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/themify-icons.css') ?>">
