@@ -372,7 +372,7 @@
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="<?php echo base_url('back_end/PengirimanProduk') ?>" target="_blank">
+                                            <a href="<?php echo base_url('back_end/Pengiriman_produk') ?>">
                                                 <span class="pcoded-mtext">Pengiriman Produk</span>
                                             </a>
                                         </li>

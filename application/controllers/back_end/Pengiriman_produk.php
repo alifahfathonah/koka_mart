@@ -15,45 +15,45 @@ class Pengiriman_produk extends CI_Controller {
 
     public function index()
     {
-        $data['pengiriman']=$this->M_pengiriman_barang->getAll()->result();
-        $this->temp->load('admin/partials', 'admin/pengiriman_barang/pengiriman_barang', $data);
+        $data['pengiriman']=$this->M_pengiriman_produk->getAll()->result();
+        $this->temp->load('back_end/partials', 'back_end/transaksi/pengiriman/pengiriman_produk', $data);
     }
 
     public function edit($id)
     {
-        $this->M_pengiriman_barang->rulesEdit();
-        $query = $this->M_pengiriman_barang->getAll($id);
+        $this->M_pengiriman_produk->rulesEdit();
+        $query = $this->M_pengiriman_produk->getAll($id);
         if ($this->form_validation->run() == false) {
             if ($query->num_rows() > 0) {
-                $tbl_pembayaran = $query->row();
-                $data = ['row' => $tbl_pembayaran];
-            $this->temp->load('admin/partials', 'admin/pengiriman_barang/form_pengiriman_barang', $data);
+                $penjualan = $query->row();
+                $data = ['row' => $penjualan];
+            $this->temp->load('back_end/partials', 'back_end/transaksi/pengiriman/form_pengiriman_produk', $data);
             }
         } else {
             $post = $this->input->post(null, true);
             if (isset($_POST['edit'])) {
-                $this->M_pengiriman_barang->editData($post);
+                $this->M_pengiriman_produk->editData($post);
                 $this->session->set_flashdata('pesan', '<div class="alert alert-outline alert-success" role="alert">
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
                                             <strong>Data!</strong> berhasil disimpan.
                                             </div>');
-                redirect('admin/pengiriman_barang');
+                redirect('back_end/Pengiriman_produk');
             }
         }
     }
 
     public function delete($id=null)
     {
-        $this->M_pengiriman_barang->deleteData($id);
-        redirect('admin/pengiriman_barang');
+        $this->M_pengiriman_produk->deleteData($id);
+        redirect('back_end/Pengiriman_produk');
    }
 
    public function print()
     {
-        $data['pengiriman']=$this->M_pengiriman_barang->getAll()->result();
-        $this->temp->load('admin/print/partials.html', 'admin/print/pengiriman_barang.html', $data);
+        $data['pengiriman']=$this->M_pengiriman_produk->getAll()->result();
+        $this->temp->load('back_end/print/partials.html', 'back_end/print/pengiriman_produk.html', $data);
    }
 
 }

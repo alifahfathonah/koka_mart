@@ -4,8 +4,8 @@
 		<div class="col-lg-8">
 			<div class="page-header-title">
 				<div class="d-inline">
-					<h4>Laporan</h4>
-					<span>Management Data laporan</span>
+					<h4>Pengiriman Produk</h4>
+					<span>Management Data Pengiriman Produk</span>
 				</div>
 			</div>
 		</div>
@@ -15,7 +15,9 @@
 					<li class="breadcrumb-item">
 						<a href="<?php echo base_url('admin') ?>"> <i class="feather icon-home"></i> </a>
 					</li>
-					<li class="breadcrumb-item"><a href="<?php echo base_url('back_end/Laporan') ?>">Laporan</a>
+					<li class="breadcrumb-item"><a href="#!">Transaksi</a>
+					</li>
+					<li class="breadcrumb-item"><a href="<?php echo base_url('back_end/produk/Pengiriman_produk') ?>">Pengiriman Produk</a>
 					</li>
 				</ul>
 			</div>
@@ -37,11 +39,12 @@
 				<table id="dom-jqry" class="table table-striped table-bordered nowrap">
 					<thead>
 						<tr>
+							<th>No</th>
 							<th>No Faktur</th>
 							<th>Customer</th>
-							<th>Total Pembelian</th>
-							<th>Status Pembayaran</th>
-							<th>Tanggal</th>
+							<th>Status</th>
+							<th>Resi</th>
+							<th>Edit Status & Resi</th>
 							<th>Detail</th>
 							<th>Hapus</th>
 						</tr>
@@ -49,17 +52,19 @@
 					<tbody>
 						<?php 
 						$i=1;
-						foreach ($laporan as $data):?>
+						foreach ($pengiriman as $data):?>
 							<tr>
+								<td><?= $i++ ?></td>
 								<td><?php echo $data->penjualan_id; ?></td>
 								<td><?php echo $data->customer_nama; ?></td>
-								<td><?php echo $data->penjualan_total; ?></td>
 								<td><?php echo $data->penjualan_status; ?></td>
-								<td><?php echo $data->penjualan_tgl; ?></td>
-								
-								<td><a class="detail" href="<?= site_url(); ?>back_end/Laporan/detail/<?= $data->penjualan_id; ?>"><button class="btn btn-info"><i class="feather icon-info"></i></button></a></td>
+								<td><?php echo $data->penjualan_resi; ?></td>
 
-								<td><a class="delete" onclick="deleteConfirm('<?= site_url(); ?>back_end/Laporan/delete/<?= $data->penjualan_id ?>')" href="#!"><button class="btn btn-danger"><i class="feather icon-trash"></i></button></a></td>
+								<td><a class="edit" href="<?= site_url(); ?>back_end/Pengiriman_produk/edit/<?= $data->penjualan_id ?>"><button class="btn btn-success"><i class="feather icon-edit"></i></button></a></td>
+								
+								<td><a class="detail" href="<?= site_url(); ?>back_end/penjualan/detail/<?= $data->penjualan_id; ?>"><button class="btn btn-info"><i class="feather icon-info"></i></button></a></td>
+
+								<td><a class="delete" onclick="deleteConfirm('<?= site_url(); ?>back_end/Penjualan/delete/<?= $data->penjualan_id ?>')" href="#!"><button class="btn btn-danger"><i class="feather icon-trash"></i></button></a></td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>

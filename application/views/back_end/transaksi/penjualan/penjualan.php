@@ -45,6 +45,7 @@
 							<th>Status Pembayaran</th>
 							<th>Tanggal</th>
 							<th>Detail</th>
+							<th>Edit</th>
 							<th>Hapus</th>
 						</tr>
 					</thead>
@@ -59,7 +60,9 @@
 								<td><?php echo $data->penjualan_status; ?></td>
 								<td><?php echo $data->penjualan_tgl; ?></td>
 								
-								<td><a class="detail" href="<?= site_url(); ?>back_end/penjualan/detail/<?= $data->penjualan_id; ?>"><button class="btn btn-info"><i class="feather icon-info"></i></button></a></td>
+								<td><a class="detail" href="<?= site_url(); ?>back_end/Penjualan/detail/<?= $data->penjualan_id; ?>"><button class="btn btn-info"><i class="feather icon-info"></i></button></a></td>
+
+								<td><a class="edit" href="<?= site_url(); ?>back_end/Penjualan/edit/<?= $data->penjualan_id ?>"><button class="btn btn-success"><i class="feather icon-edit"></i></button></a></td>
 
 								<td><a class="delete" onclick="deleteConfirm('<?= site_url(); ?>back_end/Penjualan/delete/<?= $data->penjualan_id ?>')" href="#!"><button class="btn btn-danger"><i class="feather icon-trash"></i></button></a></td>
 							</tr>

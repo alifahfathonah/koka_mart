@@ -137,7 +137,7 @@
             <!-- Invoice card end -->
             <div class="row text-center">
                 <div class="col-sm-12 invoice-btn-group text-center">
-                    <a href="<?= site_url() ?>back_end/Penjualan" class="btn btn-inverse" type="cancel">Cancel</a>
+                    <a href="javascript:history.go(-1)" class="btn btn-inverse" type="cancel">Cancel</a>
                     <a href="<?= site_url() ?>back_end/penjualan/printdtl/<?= $dtl['penjualan_id'] ?>" class="btn btn-primary">Print</a>
                 </div>
             </div>

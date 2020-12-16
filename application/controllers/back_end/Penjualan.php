@@ -19,6 +19,31 @@ class Penjualan extends CI_Controller {
         $this->temp->load('back_end/partials', 'back_end/transaksi/penjualan/penjualan', $data);
     }
 
+    public function edit($id)
+    {
+        $this->M_penjualan->rulesEdit();
+        $query = $this->M_penjualan->getAll($id);
+        if ($this->form_validation->run() == false) {
+            if ($query->num_rows() > 0) {
+                $penjualan = $query->row();
+                $data = ['row' => $penjualan];
+            $this->temp->load('back_end/partials', 'back_end/transaksi/penjualan/form_penjualan', $data);
+            }
+        } else {
+            $post = $this->input->post(null, true);
+            if (isset($_POST['edit'])) {
+                $this->M_penjualan->editData($post);
+                $this->session->set_flashdata('pesan', '<div class="alert alert-outline alert-success" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <strong>Data!</strong> berhasil disimpan.
+                                            </div>');
+                redirect('back_end/Penjualan');
+            }
+        }
+    }
+
     public function detail($id)
     {
         $where = array('penjualan_id' => $id);
