@@ -31,7 +31,7 @@
 				<div class="card-block">
 					<div class="row align-items-end">
 						<div class="col-8">
-							<h4 class="text-white">$30200</h4>
+							<h4 class="text-white">Rp. <?= $total_pendapatan['tot_pendpt']; ?></h4>
 							<h6 class="text-white m-b-0">Profit</h6>
 						</div>
 						<div class="col-4 text-right">
@@ -49,7 +49,7 @@
 				<div class="card-block">
 					<div class="row align-items-end">
 						<div class="col-8">
-							<h4 class="text-white">290+</h4>
+							<h4 class="text-white"><?= $total_pesanan['tot_ord']; ?></h4>
 							<h6 class="text-white m-b-0">Pesanan</h6>
 						</div>
 						<div class="col-4 text-right">
@@ -67,8 +67,8 @@
 				<div class="card-block">
 					<div class="row align-items-end">
 						<div class="col-8">
-							<h4 class="text-white">145</h4>
-							<h6 class="text-white m-b-0">Terjual</h6>
+							<h4 class="text-white"><?= $total_terjual['tot_terjual']; ?></h4>
+							<h6 class="text-white m-b-0">Produk Terjual</h6>
 						</div>
 						<div class="col-4 text-right">
 							<canvas id="update-chart-3" height="50"></canvas>
@@ -85,7 +85,7 @@
 				<div class="card-block">
 					<div class="row align-items-end">
 						<div class="col-8">
-							<h4 class="text-white">500</h4>
+							<h4 class="text-white"><?= $total_customer['tot_cst']; ?></h4>
 							<h6 class="text-white m-b-0">Customer</h6>
 						</div>
 						<div class="col-4 text-right">
@@ -117,36 +117,16 @@
 								</tr>
 							</thead>
 							<tbody>
+								<?php 
+								$i=1;
+								foreach ($premium as $data):?>
 								<tr>
-									<td>1</td>
-									<td>Kopi A</td>
-									<td>3</td>
-									<td class="text-right">xxx</td>
+									<td><?= $i++ ?></td>
+									<td><?php echo $data->produk_nama; ?></td>
+									<td><?php echo $data->pdetail_jumlah; ?></td>
+									<td class="text-right"><?php echo $data->pdetail_subtotal; ?></td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Kopi B</td>
-									<td>10</td>
-									<td class="text-right">xxx</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Coklat A</td>
-									<td>11</td>
-									<td class="text-right">xxx</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>Coklat B</td>
-									<td>41</td>
-									<td class="text-right">xxx</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>Olahan A</td>
-									<td>11</td>
-									<td class="text-right">xxx</td>
-								</tr>
+								<?php endforeach; ?>
 							</tbody>
 						</table>
 					</div>
@@ -170,41 +150,18 @@
 								</tr>
 							</thead>
 							<tbody>
+								<?php 
+								$i=1;
+								foreach ($ukm as $data):?>
 								<tr>
-									<td>1</td>
-									<td>Olahan A</td>
-									<td>3</td>
-									<td class="text-right">xxx</td>
+									<td><?= $i++ ?></td>
+									<td><?php echo $data->produk_nama; ?></td>
+									<td><?php echo $data->pdetail_jumlah; ?></td>
+									<td class="text-right"><?php echo $data->pdetail_subtotal; ?></td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Olahan B</td>
-									<td>10</td>
-									<td class="text-right">xxx</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Olahan C</td>
-									<td>11</td>
-									<td class="text-right">xxx</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>Olahan D</td>
-									<td>41</td>
-									<td class="text-right">xxx</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>Olahan E</td>
-									<td>11</td>
-									<td class="text-right">xxx</td>
-								</tr>
+								<?php endforeach; ?>
 							</tbody>
 						</table>
-					</div>
-					<div class="text-right  m-r-20">
-						<a href="#!" class="b-b-primary text-primary">View all Sales Locations </a>
 					</div>
 				</div>
 			</div>

@@ -9,14 +9,19 @@ class Dashboard extends CI_Controller
         if ($this->session->userdata('status') != "1520S118TK0100") {
             redirect(base_url("back_end/Authentication"));
         }
-        //$this->load->model("M_index");
+        $this->load->model("M_index");
         date_default_timezone_set('Asia/Jakarta');
     }
 
     public function index()
     {
-        
-        $this->temp->load('back_end/partials', 'back_end/index');
+        $data['premium']=$this->M_index->getAllpremium()->result();
+        $data['ukm']=$this->M_index->getAllukm()->result();
+        $data['total_customer']=$this->M_index->hitung_customer();
+        $data['total_pendapatan']=$this->M_index->hitung_pendapatan();
+        $data['total_pesanan']=$this->M_index->hitung_pesanan();
+        $data['total_terjual']=$this->M_index->hitung_terjual();
+        $this->temp->load('back_end/partials', 'back_end/index',$data);
     }
 
 }

@@ -1,5 +1,7 @@
 <?php class M_produk extends CI_Model
 {
+    //BACK END
+
     private $_table = "produk";
     public $produk_id;
 
@@ -21,7 +23,7 @@
     {
         $this->db->from('produk');
         $this->db->join('kategori', 'produk.produk_kategori_id = kategori.kategori_id', 'left');
-        $this->db->where('kategori_nama', '!Premium');
+        $this->db->where('kategori_nama !=', 'Premium');
 
         $query = $this->db->get();
         return $query;
@@ -213,6 +215,34 @@
         }
 
         return "default.jpg";
+    }
+
+    //FRONT END
+
+    function dtl_premium($where,$table){
+        $this->db->join('kategori', 'produk.produk_kategori_id = kategori.kategori_id', 'left');
+        $this->db->where('kategori_nama', 'Premium');
+        return $this->db->get_where($table,$where);
+    }
+
+    function dtl_ukm($where,$table){
+        $this->db->join('kategori', 'produk.produk_kategori_id = kategori.kategori_id', 'left');
+        $this->db->where('kategori_nama !=', 'Premium');
+        return $this->db->get_where($table,$where);
+    }
+
+    function katalog_premium($limit, $start){
+        $this->db->join('kategori', 'produk.produk_kategori_id = kategori.kategori_id', 'left');
+        $this->db->where('kategori_nama', 'Premium');
+        $query = $this->db->get('produk', $limit, $start);
+        return $query;
+    }
+
+    function katalog_ukm($limit, $start){
+        $this->db->join('kategori', 'produk.produk_kategori_id = kategori.kategori_id', 'left');
+        $this->db->where('kategori_nama !=', 'Premium');
+        $query = $this->db->get('produk', $limit, $start);
+        return $query;
     }
 
 }
