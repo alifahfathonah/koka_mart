@@ -101,45 +101,8 @@
                                     <i class="icon_bag_alt"></i>
                                     <span>3</span>
                                 </a>
-                                <div class="cart-hover">
-                                    <div class="select-items">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="si-pic"><img src="<?php echo base_url('assets/front_end/img/select-product-1.jpg') ?>" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="si-pic"><img src="<?php echo base_url('assets/front_end/img/select-product-2.jpg') ?>" alt=""></td>
-                                                    <td class="si-text">
-                                                        <div class="product-selected">
-                                                            <p>$60.00 x 1</p>
-                                                            <h6>Kabino Bedside Table</h6>
-                                                        </div>
-                                                    </td>
-                                                    <td class="si-close">
-                                                        <i class="ti-close"></i>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="select-total">
-                                        <span>total:</span>
-                                        <h5>$120.00</h5>
-                                    </div>
-                                    <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>
-                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
-                                    </div>
+                                <div class="cart-hover" id="dtl_cart">
+                                    
                                 </div>
                             </li>
                             <li class="cart-price">$150.00</li>
@@ -276,6 +239,62 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo base_url('assets/front_end/js/owl.carousel.min.js') ?>"></script>
     <script src="<?php echo base_url('assets/front_end/js/main.js') ?>"></script>
     <script src="<?php echo base_url('assets/back_end/fancybox/jquery.fancybox.min.js') ?>"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.add_cart').click(function(){
+                var produk_id    = $(this).data("produkid");
+                var produk_nama  = $(this).data("produknama");
+                var produk_harga = $(this).data("produkharga");
+                var produk_img = $(this).data("produkimg");
+                var produk_kategori_id = $(this).data("produkkategoriid");
+                var quantity     = $('#' + produk_id).val();
+                $.ajax({
+                    url : "<?php echo base_url();?>front_end/Keranjang/add_to_cart",
+                    method : "POST",
+                    data : {produk_id: produk_id, produk_nama: produk_nama, produk_harga: produk_harga, produk_img: produk_img, produk_kategori_id: produk_kategori_id, quantity: quantity},
+                    success: function(data){
+                        $('#dtl_cart').html(data);
+                    }
+                });
+            });
+        });
+
+        //Update Qty
+        $(document).ready(function(){
+            $('.itemQty').on('change',function(){
+             var el = $(this).closest('tr');
+             var id = $(el).find("#rowid").val();
+             var qty = $(this).val();
+             
+             $.ajax({
+                url:"<?php echo base_url();?>front_end/Keranjang/update_cart",
+                method : "POST",
+                data:{id:id, qty:qty},
+                success:function(data)
+                {
+                 $('#dtl_cart').html(data);
+                }
+            });
+        });
+
+        // Load shopping cart
+        $('#dtl_cart').load("<?php echo base_url();?>front_end/Keranjang/load_cart");
+
+        //Hapus Item Cart
+        $(document).on('click','.hapus_cart',function(){
+            var row_id=$(this).attr("id"); //mengambil row_id dari artibut id
+            $.ajax({
+                url : "<?php echo base_url();?>front_end/Keranjang/hapus_cart",
+                method : "POST",
+                data : {row_id : row_id},
+                success :function(data){
+                    $('#dtl_cart').html(data);
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

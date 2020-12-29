@@ -128,29 +128,29 @@
                         </ul>
                     </div>
                     <div class="product-slider owl-carousel">
-                        <?php foreach($premium as $p):?>
+                        <?php foreach($premium as $row):?>
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img style="height: 330px; width: 270px;" src="<?php echo site_url('assets/upload/produk/'.$p->produk_img) ?>" alt="">
-                                <div class="sale">Stok : <?php echo $p->produk_stok ?></div>
+                                <img style="height: 330px; width: 270px;" src="<?php echo site_url('assets/upload/produk/'.$row->produk_img) ?>" alt="">
+                                <div class="sale">Stok : <?php echo $row->produk_stok ?></div>
                                 <div class="icon">
                                     <i class="icon_heart_alt"></i>
                                 </div>
                                 <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                    <li class="quick-view"><a href="<?php echo site_url('front_end/produk/Premium/detail_premium/'.$p->produk_id) ?>">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                    <li class="w-icon active"><input style="width: 50px;" type="number" name="quantity" id="<?php echo $row->produk_id;?>" value="1" class="quantity"></li>
+                                    <li class="quick-view"><a href="<?php echo site_url('front_end/produk/Premium/detail_premium/'.$row->produk_id) ?>">+ Quick View</a></li>
+                                    <li class="w-icon"><button class="add_cart" data-produkid="<?php echo $row->produk_id;?>" data-produknama="<?php echo $row->produk_nama;?>" data-produkharga="<?php echo $row->produk_harga;?>" data-produkimg="<?php echo $row->produk_img;?>" data-produkkategoriid="<?php echo $row->produk_kategori_id;?>">Beli</button></li>
                                 </ul>
                             </div>
                             <div class="pi-text">
-                                <div class="catagory-name"><?php echo $p->kategori_nama ?></div>
+                                <div class="catagory-name"><?php echo $row->kategori_nama ?></div>
                                 <a href="#">
-                                    <h5><?php echo $p->produk_nama ?></h5>
+                                    <h5><?php echo $row->produk_nama ?></h5>
                                 </a>
                                 <div class="product-price">
-                                    Rp. <?php echo number_format($p->produk_harga); ?>
+                                    Rp. <?php echo number_format($row->produk_harga); ?>
                                 </div>
-                            </div>
+                            </div>   
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -211,14 +211,14 @@
                         <div class="product-item">
                             <div class="pi-pic">
                                 <img style="height: 330px; width: 270px;" src="<?php echo site_url('assets/upload/produk/'.$u->produk_img) ?>" alt="">
-                                <div class="sale">Stok : <?php echo $p->produk_stok ?></div>
+                                <div class="sale">Stok : <?php echo $u->produk_stok ?></div>
                                 <div class="icon">
                                     <i class="icon_heart_alt"></i>
                                 </div>
                                 <ul>
-                                    <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                     <li class="w-icon active"><input style="width: 50px;" type="number" name="quantity" id="<?php echo $u->produk_id;?>" value="1" class="quantity"></li>
                                     <li class="quick-view"><a href="<?php echo site_url('front_end/produk/Ukm/detail_ukm/'.$u->produk_id) ?>">+ Quick View</a></li>
-                                    <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                    <li class="w-icon"><button class="add_cart" data-produkid="<?php echo $u->produk_id;?>" data-produknama="<?php echo $u->produk_nama;?>" data-produkharga="<?php echo $u->produk_harga;?>" data-produkimg="<?php echo $u->produk_img;?>" data-produkkategoriid="<?php echo $u->produk_kategori_id;?>">Beli</button></li>
                                 </ul>
                             </div>
                             <div class="pi-text">
