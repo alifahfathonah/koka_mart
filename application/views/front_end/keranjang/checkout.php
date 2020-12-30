@@ -16,12 +16,16 @@
     <!-- Shopping Cart Section Begin -->
     <section class="checkout-section spad">
         <div class="container">
-            <form class="checkout-form" method="POST" enctype="multipart/form-data" action="<?= site_url() ?>front_end/Keranjang/act_checkout">
+            <form class="checkout-form" method="POST" enctype="multipart/form-data" action="<?= site_url() ?>front_end/Checkout/act_checkout">
                 <div class="row">
                     <div class="col-lg-6">
                         
                         <h4>Biiling Details</h4>
                         <div class="row">
+                            <div class="col-lg-12">
+                                <label>ID Pemesanan<span>*</span></label>
+                                <input type="text" name="penjualan_id" value="<?= $kode; ?>" readonly>
+                            </div>
                             <div class="col-lg-12">
                                 <label>Nama<span>*</span></label>
                                 <input type="text" name="penjualan_penerima" required>
@@ -36,7 +40,7 @@
                             </div>
                             <div class="col-lg-12" hidden>
                                 <label>Keranjang Total</label>
-                                <input type="text" name="penjualan_keranjang_total" readonly>
+                                <input type="text" name="penjualan_keranjang_total" value="<?= $total; ?>" readonly>
                             </div>
                             <div class="col-lg-12">
                                 <label>Kurir</label>
@@ -47,7 +51,7 @@
                                 <input type="text" name="penjualan_layanan">
                             </div>
                             <div class="col-lg-12">
-                                <label>biaya</label>
+                                <label>Biaya</label>
                                 <input type="text" name="penjualan_biaya">
                             </div>
 

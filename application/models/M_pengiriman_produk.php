@@ -13,7 +13,6 @@
 	
 	public function getAll($id = null) {
 		$this->db->from('penjualan');
-		$this->db->join('customer', 'penjualan.penjualan_customer_id = customer.customer_id', 'left');
 		$this->db->join('pembayaran', 'penjualan.penjualan_id = pembayaran.pembayaran_penjualan_id', 'left');
 
         if ($id != null) {

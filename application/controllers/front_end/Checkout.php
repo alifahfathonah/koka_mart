@@ -6,6 +6,7 @@ class Checkout extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("M_checkout");
         date_default_timezone_set('Asia/Jakarta');
     }
 
@@ -13,15 +14,22 @@ class Checkout extends CI_Controller
         if (empty($this->cart->total())) {
             redirect('front_end/Keranjang');
         }else{
-            $data['cart_checkout']=$this->cart->contents();
+            $this->M_checkout->rulesAdd();
             $total = $this->cart->total();
-            $data['total'] = $total;
+            $data = [
+                'kode' => $this->M_checkout->id_pemesanan(),
+                'cart_checkout' => $this->cart->contents(),
+                'total' => $total
+            ];
             $this->temp->load('front_end/partials', 'front_end/keranjang/checkout', $data);
         }
     }
 
-    function act_checkout(){
-        
+    public function act_checkout(){
+      $this->M_checkout->addData();
+      $this->session->set_flashdata('pesan', '<div class="alert alert-outline alert-success">Pesanan Anda berhasil diproses, silahkan lakukan pembayaran!<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+      $this->cart->destroy();
+      redirect('front_end/Keranjang');
     }
 
     public function _api_ongkir_post($origin, $des, $qty, $cour)

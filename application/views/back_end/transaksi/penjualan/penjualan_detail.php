@@ -90,9 +90,9 @@
                                             foreach($detail as $data):?>
                                         <tr>
                                             <td><?php echo $data->produk_nama ?></td>
-                                            <td><?php echo $data->produk_harga ?></td>
+                                            <td>Rp. &nbsp; <?php echo number_format($data->produk_harga); ?></td>
                                             <td><?php echo $data->pdetail_jumlah ?></td>
-                                            <td><?php echo $data->penjualan_total ?></td>
+                                            <td>Rp. &nbsp; <?php echo number_format($data->pdetail_subtotal); ?></td>
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>
@@ -106,11 +106,11 @@
                                 <tbody>
                                     <tr>
                                         <th>Sub Total :</th>
-                                        <td><?= $dtl['pdetail_subtotal']; ?></td>
+                                        <td>Rp. &nbsp; <?php echo number_format($dtl['penjualan_keranjang_total']); ?></td>
                                     </tr>
                                     <tr>
                                         <th>Biaya Kirim :</th>
-                                        <td><?= $dtl['penjualan_biaya']; ?></td>
+                                        <td>Rp. &nbsp; <?php echo number_format($dtl['penjualan_biaya']); ?></td>
                                     </tr>
                                     <tr class="text-info">
                                         <td>
@@ -119,7 +119,7 @@
                                         </td>
                                         <td>
                                             <hr>
-                                            <h5 class="text-primary"><?= $dtl['penjualan_total']; ?></h5>
+                                            <h5 class="text-primary">Rp. &nbsp; <?php echo number_format($dtl['penjualan_total']); ?></h5>
                                         </td>
                                     </tr>
                                 </tbody>
