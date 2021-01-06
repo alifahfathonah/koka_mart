@@ -57,12 +57,20 @@
 				<div class="row">
 					<div class="col-lg-4">
 						<div class="cart-buttons">
-							<a href="javascript:history.go(-1)" class="primary-btn continue-shop">Kembali Berbelanja</a>
+							<a href="<?php echo base_url('front_end/produk/Premium') ?>" class="primary-btn continue-shop">Kembali Berbelanja</a>
 						</div>
 					</div>
-					<div class="col-lg-4 offset-lg-4">
-						<div class="proceed-checkout">
-							<a href="#" class="proceed-btn">Tambah Ke Keranjang</a>
+					<div class="col-lg-8">
+						<div class="row">
+							<div class="col-lg-2 offset-lg-6" style="margin-top: 10px;">
+								Qty :
+								<input style="width: 50px;" type="number" name="quantity" id="<?php echo $row->produk_id;?>" value="1" class="quantity">
+							</div>
+							<div class="col-lg-4">
+								<div class="proceed-checkout">
+									<button class="add_cart proceed-btn" data-produkid="<?php echo $row->produk_id;?>" data-produknama="<?php echo $row->produk_nama;?>" data-produkharga="<?php echo $row->produk_harga;?>" data-produkimg="<?php echo $row->produk_img;?>" data-produkkategoriid="<?php echo $row->produk_kategori_id;?>">Tambah Ke Keranjang</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

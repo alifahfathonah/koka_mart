@@ -71,7 +71,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="<?php echo base_url('Home') ?>">
                                 <img src="<?php echo base_url('assets/front_end/img/kokaMart.png') ?>" alt="">
                             </a>
                         </div>
@@ -81,7 +81,7 @@
                             <div class="advanced-search">
                                 <button type="button" class="category-btn">Pencarian &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                     <div class="input-group">
-                                        <input type="text" name="keyword" placeholder="Cari produk anda!">
+                                        <input type="text" name="keyword" placeholder="Cari produk anda!" required>
                                         <button type="submit"><i class="ti-search"></i></button>
                                     </div>
                             </div>
@@ -105,7 +105,7 @@
                                     
                                 </div>
                             </li>
-                            <li class="cart-price">$150.00</li>
+                            <li class="cart-price">Rp. <?php echo number_format($this->cart->total()); ?></li>
                         </ul>
                     </div>
                 </div>
@@ -140,6 +140,7 @@
                             </ul>
                         </li>
                         <li><a href="<?php echo base_url('keranjang') ?>">Keranjang</a></li>
+                        <li><a href="<?php echo base_url('pesanan') ?>">Cek Pesanan Anda</a></li>
                         <li><a href="<?php echo base_url('faq') ?>">FAQ</a></li>
                         <li><a href="<?php echo base_url('hubungi_kami') ?>">Hubungi Kami</a></li>
                     </ul>
@@ -295,6 +296,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         });
     });
 </script>
+
+<script type="text/javascript">
+    $('#submitbtn').click(function(){
+        $('#acc').click();
+    });
+</script>
+
 </body>
 
 </html>

@@ -38,9 +38,9 @@
                                             <i class="icon_heart_alt"></i>
                                         </div>
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                            <li class="w-icon active"><input style="width: 50px;" type="number" name="quantity" id="<?php echo $u->produk_id;?>" value="1" class="quantity"></li>
                                             <li class="quick-view"><a href="<?php echo site_url('front_end/produk/Ukm/detail_ukm/'.$u->produk_id) ?>">+ Quick View</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                            <li class="w-icon"><button class="add_cart" data-produkid="<?php echo $u->produk_id;?>" data-produknama="<?php echo $u->produk_nama;?>" data-produkharga="<?php echo $u->produk_harga;?>" data-produkimg="<?php echo $u->produk_img;?>" data-produkkategoriid="<?php echo $u->produk_kategori_id;?>">Beli</button></li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">

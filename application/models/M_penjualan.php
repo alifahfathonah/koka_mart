@@ -15,7 +15,7 @@
         $this->db->join('penjualan_detail', 'penjualan_detail.pdetail_penjualan_id = penjualan.penjualan_id', 'left');
         $this->db->join('pembayaran', 'penjualan.penjualan_id = pembayaran.pembayaran_penjualan_id', 'left');
         $this->db->join('produk', 'penjualan_detail.pdetail_produk_id = produk.produk_id', 'left');
-        // $this->db->where('detailjual_no', $id)
+        $this->db->where('penjualan_id', $id);
         return $this->db->get('penjualan')->row_array();
     }
 

@@ -37,9 +37,9 @@
                                             <i class="icon_heart_alt"></i>
                                         </div>
                                         <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                            <li class="w-icon active"><input style="width: 50px;" type="number" name="quantity" id="<?php echo $p->produk_id;?>" value="1" class="quantity"></li>
                                             <li class="quick-view"><a href="<?php echo site_url('front_end/produk/Premium/detail_premium/'.$p->produk_id) ?>">+ Quick View</a></li>
-                                            <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                            <li class="w-icon"><button class="add_cart" data-produkid="<?php echo $p->produk_id;?>" data-produknama="<?php echo $p->produk_nama;?>" data-produkharga="<?php echo $p->produk_harga;?>" data-produkimg="<?php echo $p->produk_img;?>" data-produkkategoriid="<?php echo $p->produk_kategori_id;?>">Beli</button></li>
                                         </ul>
                                     </div>
                                     <div class="pi-text">

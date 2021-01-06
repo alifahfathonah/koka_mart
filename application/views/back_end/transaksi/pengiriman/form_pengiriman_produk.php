@@ -17,7 +17,7 @@
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
-                        <input type="text" name="customer_nama" class="form-control" value="<?= $row->customer_nama; ?>" readonly>
+                        <input type="text" name="penjualan_penerima" class="form-control" value="<?= $row->penjualan_penerima; ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group row">

@@ -56,7 +56,7 @@
 							<tr>
 								<td><?= $i++ ?></td>
 								<td><?php echo $data->penjualan_id; ?></td>
-								<td><?php echo $data->customer_nama; ?></td>
+								<td><?php echo $data->penjualan_penerima; ?></td>
 								<td><?php echo $data->penjualan_status; ?></td>
 								<td><?php echo $data->penjualan_resi; ?></td>
 
