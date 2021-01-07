@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard | KokaMart </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="#">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="<?= base_url('assets/front_end/img/logo_koka.png') ?>">
+    <!-- Google font-->
+    <link href="<?php echo base_url('assets/back_end/css/apis.css') ?>" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/bootstrap/css/bootstrap.min.css') ?>">
+    <!-- sweet alert framework -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/sweetalert/css/sweetalert.css') ?>">
+    <!-- animation nifty modal window effects css -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/css/component.css') ?>">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/icon/themify-icons/themify-icons.css') ?>">
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/back_end/bower_components/select2/css/select2.min.css') ?>">
+    <!-- Multi Select css -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/bootstrap-multiselect/css/bootstrap-multiselect.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/multiselect/css/multi-select.css') ?>">
+
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/icon/icofont/css/icofont.css') ?>">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/icon/feather/css/feather.css') ?>">
+    <!-- Data Table Css -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/pages/data-table/css/buttons.dataTables.min.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') ?>">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/css/style.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/css/jquery.mCustomScrollbar.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/back_end/fancybox/jquery.fancybox.min.css') ?>" />
+</head>
+<body>
+<!-- Page body start -->
+<div class="page-body">
+    <!-- Container-fluid starts -->
+    <div class="container">
+        <!-- Main content starts -->
+        <div>
+            <!-- Invoice card start -->
+            <div class="card">
+                <div class="row invoice-contact">
+                    <div class="col-md-8">
+                        <div class="invoice-box row">
+                            <div class="col-sm-12">
+                                <table class="table table-responsive invoice-table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td><img style="height: 50px;" src="<?php echo base_url('assets/front_end/img/kokamart.png') ?>" class="m-b-10" alt=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>KokaMart</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jl. PB Sudirman No.90 Kec. Patrang, Kabupaten Jember, Jawa Timur 68118</td>
+                                        </tr>
+                                        <tr>
+                                            <td>iccri@iccri.net</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(62331) 757130</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <div class="card-block">
+                    <div class="row invoive-info">
+                        <div class="col-md-4 col-xs-12 invoice-client-info">
+                            <h6>Penerima :</h6>
+                            <h6 class="m-0"><?= $dtl['penjualan_penerima']; ?></h6>
+                            <p class="m-0 m-t-10"><?= $dtl['penjualan_alamat']; ?></p>
+                            <p class="m-0"><?= $dtl['penjualan_telp']; ?></p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <h6>Informasi Pemesanan :</h6>
+                            <table class="table table-responsive invoice-table invoice-order table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>Tanggal :</th>
+                                        <td><?= $dtl['penjualan_tgl']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pengiriman :</th>
+                                        <td>
+                                            <?= $dtl['penjualan_kurir']; ?>&nbsp;<?= $dtl['penjualan_layanan']; ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Status :</th>
+                                        <td>
+                                            <span class="label label-warning"><?= $dtl['penjualan_status']; ?></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <h6 class="m-b-20">ID Penjualan <span><?= $dtl['penjualan_id']; ?></span></h6>
+                            <h6 class="text-uppercase text-primary">Total Pembayaran :
+                                <span>Rp. <?= $dtl['penjualan_total']; ?></span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table  invoice-detail-table">
+                                    <thead>
+                                        <tr class="thead-default">
+                                            <th>Produk</th>
+                                            <th>Harga</th>
+                                            <th>Jumlah</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php $i=1;
+                                            foreach($detail as $data):?>
+                                        <tr>
+                                            <td><?php echo $data->produk_nama ?></td>
+                                            <td>Rp. &nbsp; <?php echo number_format($data->produk_harga); ?></td>
+                                            <td><?php echo $data->pdetail_jumlah ?></td>
+                                            <td>Rp. &nbsp; <?php echo number_format($data->pdetail_subtotal); ?></td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-responsive invoice-table invoice-total">
+                                <tbody>
+                                    <tr>
+                                        <th>Sub Total :</th>
+                                        <td>Rp. &nbsp; <?php echo number_format($dtl['penjualan_keranjang_total']); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Biaya Kirim :</th>
+                                        <td>Rp. &nbsp; <?php echo number_format($dtl['penjualan_biaya']); ?></td>
+                                    </tr>
+                                    <tr class="text-info">
+                                        <td>
+                                            <hr>
+                                            <h5 class="text-primary">Total :</h5>
+                                        </td>
+                                        <td>
+                                            <hr>
+                                            <h5 class="text-primary">Rp. &nbsp; <?php echo number_format($dtl['penjualan_total']); ?></h5>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h6>Terms And Condition :</h6>
+                            <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Container ends -->
+</div>
+<!-- Page body end -->
+    <script data-cfasync="false" src="<?php echo base_url('assets/back_end/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/jquery/js/jquery.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/jquery-ui/js/jquery-ui.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/popper.js/js/popper.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/bootstrap/js/bootstrap.min.js') ?>"></script>
+
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/jquery-slimscroll/js/jquery.slimscroll.js') ?>"></script>
+
+    <!-- modernizr js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/modernizr/js/modernizr.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/modernizr/js/css-scrollbars.js') ?>"></script>
+
+    <!-- sweet alert js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/sweetalert/js/sweetalert.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/modal.js') ?>"></script>
+    <!-- sweet alert modal.js intialize js -->
+    <!-- modalEffects js nifty modal window effects -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/modalEffects.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/classie.js') ?>"></script>
+
+    <!-- data-table js -->
+    <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/pages/data-table/js/jszip.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/pages/data-table/js/pdfmake.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/pages/data-table/js/vfs_fonts.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net-buttons/js/buttons.print.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net-buttons/js/buttons.html5.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js') ?>"></script>
+
+    <!-- Chart js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/chart.js/js/Chart.js') ?>"></script>
+
+    <!-- i18next.min.js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/i18next/js/i18next.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/jquery-i18next/js/jquery-i18next.min.js') ?>"></script>
+
+    <!-- Select 2 js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/select2/js/select2.full.min.js') ?>"></script>
+    <!-- Multiselect js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/bootstrap-multiselect/js/bootstrap-multiselect.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/bower_components/multiselect/js/jquery.multi-select.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/jquery.quicksearch.js') ?>"></script>
+
+    <!-- amchart js -->
+    <script src="<?php echo base_url('assets/back_end/pages/widget/amchart/amcharts.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/pages/widget/amchart/serial.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/pages/widget/amchart/light.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/js/jquery.mCustomScrollbar.concat.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/SmoothScroll.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/js/pcoded.min.js') ?>"></script>
+
+    <!-- custom js -->
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/pages/advance-elements/select2-custom.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/pages/data-table/js/data-table-custom.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/js/vartical-layout.min.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/pages/dashboard/custom-dashboard.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/back_end/js/script.min.js') ?>"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="<?php echo base_url('assets/back_end/js/gtagmanager.js') ?>"></script>
+
+    <script src="<?php echo base_url('assets/back_end/ckeditor/ckeditor.js') ?>"></script>
+    <script src="<?php echo base_url('assets/back_end/fancybox/jquery.fancybox.min.js') ?>"></script>
+
+    <script type="text/javascript">
+         window.print();
+    </script>
+</body>
+
+</html>

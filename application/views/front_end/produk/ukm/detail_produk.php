@@ -37,10 +37,6 @@
 									<td><?php echo $row->kategori_nama; ?></td>
 								</tr>
 								<tr>
-									<td>Stok</td>
-									<td><?php echo $row->produk_stok; ?></td>
-								</tr>
-								<tr>
 									<td>Harga</td>
 									<td>Rp. <?php echo number_format($row->produk_harga); ?></td>
 								</tr>

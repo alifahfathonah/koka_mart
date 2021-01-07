@@ -48,12 +48,6 @@
                         <input type="number" placeholder="Rp. " name="produk_harga" class="form-control">
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">stok</label>
-                    <div class="col-sm-10">
-                        <input type="number" name="produk_stok" class="form-control">
-                    </div>
-                </div>
 
                 <div class="form-group row">
                     <label class="col-sm-2"></label>
@@ -113,12 +107,6 @@
                     <label class="col-sm-2 col-form-label">Harga</label>
                     <div class="col-sm-10">
                         <input type="number" placeholder="Rp. " name="produk_harga" value="<?= $row->produk_harga; ?>" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">stok</label>
-                    <div class="col-sm-10">
-                        <input type="number" name="produk_stok" value="<?= $row->produk_stok; ?>" class="form-control">
                     </div>
                 </div>
 

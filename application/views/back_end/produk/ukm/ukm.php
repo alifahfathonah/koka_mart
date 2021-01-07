@@ -50,8 +50,7 @@
 							<th>Nama</th>
 							<th>Foto</th>
 							<th>Harga</th>
-							<th>Stok</th>
-							<th>Detail</th>
+							<th>Update</th>
 							<th>Ubah</th>
 							<th>Hapus</th>
 						</tr>
@@ -65,10 +64,10 @@
 								<td><?php echo $data->produk_nama; ?></td>
 								<td align="center"><a href="<?= base_url('assets/upload/produk/'.$data->produk_img) ?>" data-fancybox data-caption="Produk UKM / Lainnya"> <img style="height: 50px; width: 50px;" src="<?= base_url('assets/upload/produk/'.$data->produk_img) ?>"></a>&nbsp;&nbsp;&nbsp;
                                         <a class="edit_img" href="<?= site_url(); ?>back_end/produk/Ukm/edit_img/<?= $data->produk_id ?>"><i class="fa fa-edit">Ganti</i></a></td>
-								<td><?php echo $data->produk_harga; ?></td>
-								<td><?php echo $data->produk_stok; ?></td>
+								<td>Rp.<?php echo number_format($data->produk_harga); ?></td>
+								<td><?php echo $data->produk_update; ?></td>
 
-								<td><button class="btn btn-info" data-toggle="modal" data-target="#modalDetail<?= $data->produk_id; ?>"><i class="feather icon-info"></i></button></td>
+								<!--<td><button class="btn btn-info" data-toggle="modal" data-target="#modalDetail<?= $data->produk_id; ?>"><i class="feather icon-info"></i></button></td>-->
 
 								<td><a class="edit" href="<?= site_url(); ?>back_end/produk/Ukm/edit/<?= $data->produk_id ?>"><button class="btn btn-success"><i class="feather icon-edit"></i></button></a></td>
 
@@ -84,6 +83,7 @@
 </div>
 
 <!-- Modal -->
+<!--
 <?php foreach($ukmModal as $i):?>
 <div class="modal fade" id="modalDetail<?= $i['produk_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -101,16 +101,8 @@
                 <td><?= $i['kategori_nama'] ?></td>
             </tr>
             <tr>
-                <td>Deskripsi</td>
-                <td><?= $i['produk_deskripsi'] ?></td>
-            </tr>
-            <tr>
                 <td>Harga</td>
                 <td><?= $i['produk_harga'] ?></td>
-            </tr>
-            <tr>
-                <td>Stok</td>
-                <td><?= $i['produk_stok'] ?></td>
             </tr>
             <tr>
                 <td>Data Input</td>
@@ -130,3 +122,4 @@
   </div>
 </div>
 <?php endforeach; ?>
+-->

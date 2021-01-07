@@ -116,9 +116,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="product-large set-bg" data-setbg="<?php echo base_url('assets/front_end/img/products/women-large.jpg') ?>">
-                        <h2>Premium</h2>
-                        <a href="<?php echo base_url('front_end/produk/Premium') ?>">Temukan Produk Lainnya</a>
+                    <div class="product-large set-bg" data-setbg="<?php echo base_url('assets/front_end/img/polos.jpg') ?>">
+                        <h2 style="color: black;">Premium</h2>
+                        <a style="color: #FBAC03;" href="<?php echo base_url('front_end/produk/Premium') ?>">Temukan Produk Lainnya</a>
                     </div>
                 </div>
                 <div class="col-lg-8 offset-lg-1">
@@ -131,7 +131,7 @@
                         <?php foreach($premium as $row):?>
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img style="height: 330px; width: 270px;" src="<?php echo site_url('assets/upload/produk/'.$row->produk_img) ?>" alt="">
+                                <img src="<?php echo site_url('assets/upload/produk/'.$row->produk_img) ?>" alt="">
                                 <!--<div class="sale"><?php echo $row->kategori_nama ?></div>-->
                                 <div class="icon">
                                     <!--<i class="icon_heart_alt"></i>-->
@@ -211,7 +211,7 @@
                         <?php foreach($ukm as $u):?>
                         <div class="product-item">
                             <div class="pi-pic">
-                                <img style="height: 330px; width: 270px;" src="<?php echo site_url('assets/upload/produk/'.$u->produk_img) ?>" alt="">
+                                <img src="<?php echo site_url('assets/upload/produk/'.$u->produk_img) ?>" alt="">
                                 <!--<div class="sale"><?php echo $u->kategori_nama ?></div>-->
                                 <div class="icon">
                                     <!--<i class="icon_heart_alt"></i>-->
@@ -231,16 +231,15 @@
                                 <div class="product-price">
                                     Rp. <?php echo number_format($u->produk_harga); ?>
                                 </div>
-                                <label>Stok : <?php echo $u->produk_stok ?></label>
                             </div>
                         </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="col-lg-3 offset-lg-1">
-                    <div class="product-large set-bg m-large" data-setbg="<?php echo base_url('assets/front_end/img/products/man-large.jpg') ?>">
-                        <h2>UKM</h2>
-                        <a href="<?php echo base_url('front_end/produk/Ukm') ?>">Temukan Produk Lainnya</a>
+                    <div class="product-large set-bg m-large" data-setbg="<?php echo base_url('assets/front_end/img/polos.jpg') ?>">
+                        <h2 style="color: black;">UKM</h2>
+                        <a style="color: #FBAC03;" href="<?php echo base_url('front_end/produk/Ukm') ?>">Temukan Produk Lainnya</a>
                     </div>
                 </div>
             </div>
@@ -250,7 +249,9 @@
 
     <!-- Instagram Section Begin -->
     <div class="instagram-photo">
-        <div class="insta-item set-bg" data-setbg="<?php echo base_url('assets/front_end/img/insta-1.jpg') ?>">
+        
+        <div class="elfsight-app-144aa046-5293-46be-bf7b-2b632d0805d1"></div>
+        <!--<div class="insta-item set-bg" data-setbg="<?php echo base_url('assets/front_end/img/insta-1.jpg') ?>">
             <div class="inside-text">
                 <i class="ti-instagram"></i>
                 <h5><a href="#">colorlib_Collection</a></h5>
@@ -285,7 +286,7 @@
                 <i class="ti-instagram"></i>
                 <h5><a href="#">colorlib_Collection</a></h5>
             </div>
-        </div>
+        </div>-->
     </div>
     <!-- Instagram Section End -->
 

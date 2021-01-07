@@ -13,7 +13,7 @@
                                 <table class="table table-responsive invoice-table table-borderless">
                                     <tbody>
                                         <tr>
-                                            <td><img src="<?php echo base_url('assets/back_end/images/logo-blue.png') ?>" class="m-b-10" alt=""></td>
+                                            <td><img style="height: 50px;" src="<?php echo base_url('assets/front_end/img/kokamart.png') ?>" class="m-b-10" alt=""></td>
                                         </tr>
                                         <tr>
                                             <td>KokaMart</td>

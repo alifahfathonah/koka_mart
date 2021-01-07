@@ -58,18 +58,12 @@ class Penjualan extends CI_Controller {
         redirect('back_end/Penjualan');
    }
 
-   public function print()
-    {
-        $data['penjualan']=$this->M_penjualan->getAll()->result();
-        $this->temp->load('back_end/print/partials.html', 'back_end/print/penjualan.html', $data);
-   }
-
    public function printdtl($id)
     {
         $where = array('penjualan_id' => $id);
         $data['dtl'] = $this->M_penjualan->dtl($id);
         $data['detail']=$this->M_penjualan->detail($where,'penjualan')->result();
-        $this->temp->load('back_end/print/partials.html', 'back_end/print/penjualan_dtl.html', $data);
+        $this->load->view('back_end/print/penjualan_dtl.html', $data);
    }
 
 }

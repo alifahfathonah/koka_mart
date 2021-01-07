@@ -145,7 +145,6 @@
             'produk_img' => $this->_uploadImage(),
             'produk_deskripsi' => htmlspecialchars($this->input->post('produk_deskripsi', true)),
             'produk_harga' => htmlspecialchars($this->input->post('produk_harga', true)),
-            'produk_stok' => htmlspecialchars($this->input->post('produk_stok', true)),
             'produk_input' => date('Y-m-d H:i:s')
         ];
 
@@ -160,7 +159,6 @@
             'produk_nama' => htmlspecialchars($this->input->post('produk_nama', true)),
             'produk_deskripsi' => htmlspecialchars($this->input->post('produk_deskripsi', true)),
             'produk_harga' => htmlspecialchars($this->input->post('produk_harga', true)),
-            'produk_stok' => htmlspecialchars($this->input->post('produk_stok', true)),
             'produk_update' => date('Y-m-d H:i:s')
         ];
 

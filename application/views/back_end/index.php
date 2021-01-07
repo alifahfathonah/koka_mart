@@ -99,7 +99,7 @@
 			</div>
 		</div>
 		<!-- task, page, download counter  end -->
-
+<!--
 		<div class="col-xl-6 col-md-12">
 			<div class="card table-card">
 				<div class="card-header">
@@ -167,3 +167,4 @@
 			</div>
 		</div>
 
+-->

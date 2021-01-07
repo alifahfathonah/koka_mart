@@ -141,7 +141,7 @@
     <footer class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="footer-left">
                         <div class="footer-logo">
                             <a href="#"><img style="width: 200px;" src="<?php echo base_url('assets/front_end/img/kokaMart.png') ?>" alt=""></a>
@@ -159,36 +159,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 offset-lg-1">
-                    <div class="footer-widget">
-                        <h5>Information</h5>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="col-lg-2">
                     <div class="footer-widget">
-                        <h5>My Account</h5>
+                        <h5>Kategori</h5>
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a href="<?php echo base_url('front_end/produk/Premium') ?>">Produk Premium</a></li>
+                            <li><a href="<?php echo base_url('front_end/produk/Ukm') ?>">Produk UKM</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <h5>Butuh Bantuan ?</h5>
+                        <ul>
+                            <li><a href="<?php echo base_url('faq') ?>">FAQ</a></li>
+                            <li><a href="<?php echo base_url('hubungi_kami') ?>">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
                     <div class="newslatter-item">
-                        <h5>Join Our Newsletter Now</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
-                        </form>
+                        <iframe src="https://snapwidget.com/embed/897023" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
                     </div>
                 </div>
             </div>
@@ -224,6 +215,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="<?php echo base_url('assets/front_end/js/owl.carousel.min.js') ?>"></script>
     <script src="<?php echo base_url('assets/front_end/js/main.js') ?>"></script>
     <script src="<?php echo base_url('assets/back_end/fancybox/jquery.fancybox.min.js') ?>"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
