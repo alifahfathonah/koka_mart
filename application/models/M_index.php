@@ -40,8 +40,8 @@
     }
 
     //Back End
-    public function hitung_customer(){
-        $query = $this->db->query('SELECT COUNT(customer_id) AS tot_cst FROM customer WHERE customer_status="1" ');
+    public function hitung_produk(){
+        $query = $this->db->query('SELECT COUNT(produk_id) AS tot_produk FROM produk');
         return $query->row_array();
     }
 
@@ -61,6 +61,22 @@
     }
 
     //FRONT END
+
+    public function del_waiting(){
+        $query = $this->db->query('DELETE FROM penjualan WHERE (DATEDIFF(CURDATE(), penjualan_tgl) > 2) AND (penjualan_status = "Waiting for Payment")');
+        return $query;
+    }
+
+    public function del_reject(){
+        $query = $this->db->query('DELETE FROM penjualan WHERE (DATEDIFF(CURDATE(), penjualan_tgl) > 1) AND (penjualan_status = "Rejected")');
+        return $query;
+    }
+
+    public function del_cancel(){
+        $query = $this->db->query('DELETE FROM penjualan WHERE (DATEDIFF(CURDATE(), penjualan_tgl) > 1) AND (penjualan_status = "Canceled")');
+        return $query;
+    }
+
     public function getPremium($id = null)
     {
         $this->db->from('produk');

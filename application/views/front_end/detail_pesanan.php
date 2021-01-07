@@ -12,6 +12,7 @@
         <div class="toolbar hidden-print">
             <div class="text-right">
                 <a href="<?php echo base_url('front_end/Pesanan') ?>"><button class="btn btn-secondary">Kembali</button></a>
+                <a href="https://wa.me/+6289608560667?text=Saya%20mau%20membatalkan%20pemesanan%20saya.%0AId%20Pemesanan%20%3A%20<?= $dtl['penjualan_id']; ?>%0AMohon%20maaf.%20Terima%20Kasih."><button class="btn btn-danger">Batalkan Pesanan</button></a>
                 <a href="https://wa.me/+6289608560667?text=Saya%20mau%20mengkonfirmasi%20pemesanan%20saya.%0AId%20Pemesanan%20%3A%20<?= $dtl['penjualan_id']; ?>%0ATerima%20Kasih."><button class="btn btn-primary">Konfirmasi Pesanan</button></a>
                 <button id="printInvoice" class="btn btn-warning"><i class="fa fa-print"></i> Print</button>
             </div>

@@ -19,22 +19,16 @@
   <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
   <meta name="author" content="colorlib" />
 
-  <link rel="icon" href="https://colorlib.com/polygon/admindek/files/assets/images/favicon.ico" type="image/x-icon">
-
+  <link rel="shortcut icon" href="<?= base_url('assets/front_end/img/logo_koka.png') ?>">
+  
   <link href="<?php echo base_url('assets/back_end/login/css/fontgapis.css') ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/back_end/login/css/fontqiucksand.css') ?>" rel="stylesheet">
-
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/bootstrap.min.css') ?>">
-
   <link rel="stylesheet" href="<?php echo base_url('assets/back_end/login/css/waves.min.css') ?>" type="text/css" media="all">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/feather.css') ?>">
-
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/themify-icons.css') ?>">
-
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/icofont.css') ?>">
-
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/font-awesome.min.css') ?>">
-
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/style.css') ?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/back_end/login/css/pages.css') ?>">
 
@@ -100,16 +94,15 @@
 
                     <form class="md-float-material form-material" method="post" action="<?php echo base_url('back_end/Authentication/act_login'); ?>">
                         <div class="text-center">
-                            <img src="<?php echo base_url('assets/back_end/login/png/logo.png') ?>" alt="logo.png">
+                            
                         </div>
                         <div class="auth-box card">
                             <div class="card-block">
                                 <div class="row m-b-20">
                                     <div class="col-md-12">
-                                        <h3 class="text-center txt-primary">Sign In</h3>
+                                        <h3 class="text-center txt-primary" style="margin: 20px 0 10px 0;"><img style="height: 50px;" src="<?php echo base_url('assets/front_end/img/kokamart.png') ?>" alt="logo.png"></h3>
                                     </div>
                                 </div>
-                                <p class="text-muted text-center p-b-5">Silahkan Sign In untuk Melanjutkan</p>
                                 <?= $this->session->flashdata('pesan'); ?>
                                 <div class="form-group form-primary">
                                     <input type="text" name="admin_username" class="form-control" required>

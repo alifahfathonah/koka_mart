@@ -15,9 +15,12 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
+        $this->M_index->del_waiting();
+        $this->M_index->del_reject();
+        $this->M_index->del_cancel();
         $data['premium']=$this->M_index->getAllpremium()->result();
         $data['ukm']=$this->M_index->getAllukm()->result();
-        $data['total_customer']=$this->M_index->hitung_customer();
+        $data['total_produk']=$this->M_index->hitung_produk();
         $data['total_pendapatan']=$this->M_index->hitung_pendapatan();
         $data['total_pesanan']=$this->M_index->hitung_pesanan();
         $data['total_terjual']=$this->M_index->hitung_terjual();

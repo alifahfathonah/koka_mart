@@ -17,8 +17,7 @@
     <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
     <meta name="author" content="#">
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="<?= base_url('assets/back_end/favicon.png') ?>">
-    <!--<link rel="icon" href="<?php echo base_url('assets/back_end/images/favicon.ico') ?>" type="image/x-icon">-->
+    <link rel="shortcut icon" href="<?= base_url('assets/front_end/img/logo_koka.png') ?>">
     <!-- Google font-->
     <link href="<?php echo base_url('assets/back_end/css/apis.css') ?>" rel="stylesheet">
     <!-- Required Fremwork -->
@@ -331,11 +330,11 @@
                                         <span class="pcoded-mtext">Data Master</span>
                                     </a>
                                     <ul class="pcoded-submenu">
-                                        <li class="">
+                                        <!--<li class="">
                                             <a href="<?php echo base_url('back_end/Customer') ?>">
                                                 <span class="pcoded-mtext">Data Customer</span>
                                             </a>
-                                        </li>
+                                        </li>-->
                                         <li class="">
                                             <a href="<?php echo base_url('back_end/Kategori') ?>">
                                                 <span class="pcoded-mtext">Data Kategori</span>

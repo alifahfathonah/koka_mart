@@ -12,6 +12,9 @@ class Home extends CI_Controller
 
     public function index()
     {
+        $this->M_index->del_waiting();
+        $this->M_index->del_reject();
+        $this->M_index->del_cancel();
         $data['premium']=$this->M_index->getPremium()->result();
         $data['ukm']=$this->M_index->getUkm()->result();
         $this->temp->load('front_end/partials', 'front_end/index', $data);

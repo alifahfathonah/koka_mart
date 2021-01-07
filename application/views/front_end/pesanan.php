@@ -76,16 +76,20 @@
                                 <a href="#">
                                     <h5><span style="color: red;">Id Pemesanan :</span>&nbsp;<?php echo $s->penjualan_id ?></h5>
                                 </a>
-                                <p><?php echo $s->penjualan_penerima ?>&nbsp;/&nbsp;<?php echo $s->penjualan_telp ?></p>
+                                <p>Nama : <?php echo $s->penjualan_penerima ?></p>
+                                <p>No Telp : <?php echo $s->penjualan_telp ?></p>
                                 <p>Total Pemesanan : <span class="badge badge-success">Rp. <?php echo number_format($s->penjualan_total) ?>&nbsp;</span></p>
                                 <p><span class="badge badge-info">Status :&nbsp;<?php echo $s->penjualan_status ?></span></p>
                             </div>
                             <div class="col-lg-3">
-                                <div style="margin: 0 3em 0 3em">
+                                <div style="margin: 0 2em 0 2em">
                                     <a href="https://wa.me/+6289608560667?text=Saya%20mau%20mengkonfirmasi%20pemesanan%20saya.%0AId%20Pemesanan%20%3A%20<?php echo $s->penjualan_id; ?>%0ATerima%20Kasih."><button class="btn btn-primary">Konfirmasi Pesanan</button></a>
                                 </div>
-                                <div style="margin: 10px 3em 0 3em">
+                                <div style="margin: 10px 2em 0 2em">
                                     <a href="<?php echo site_url('front_end/Pesanan/detail/'.$s->penjualan_id) ?>"><button class="btn btn-warning">Detail Pemesanan</button></a>
+                                </div>
+                                <div style="margin: 10px 2em 0 2em">
+                                    <a href="https://wa.me/+6289608560667?text=Saya%20mau%20membatalkan%20pemesanan%20saya.%0AId%20Pemesanan%20%3A%20<?php echo $s->penjualan_id; ?>%0AMohon%20maaf.%20Terima%20Kasih."><button class="btn btn-danger">Batalkan Pesanan</button></a>
                                 </div>
                             </div>
                         </div>

@@ -85,8 +85,8 @@
 				<div class="card-block">
 					<div class="row align-items-end">
 						<div class="col-8">
-							<h4 class="text-white"><?= $total_customer['tot_cst']; ?></h4>
-							<h6 class="text-white m-b-0">Customer</h6>
+							<h4 class="text-white"><?= $total_produk['tot_produk']; ?></h4>
+							<h6 class="text-white m-b-0">Total Produk</h6>
 						</div>
 						<div class="col-4 text-right">
 							<canvas id="update-chart-4" height="50"></canvas>

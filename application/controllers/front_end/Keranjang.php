@@ -50,6 +50,12 @@ class Keranjang extends CI_Controller
 
 	function show_cart(){ //Fungsi untuk menampilkan Cart
 		$output = '';
+		$output = '<li class="cart-icon">
+                                <a href="#">
+                                    <i class="icon_bag_alt"></i>
+                                    <span>.</span>
+                                </a>
+                                <div class="cart-hover">';
 		foreach ($this->cart->contents() as $items) {
 			$output .='
 			<div class="select-items">
@@ -63,7 +69,6 @@ class Keranjang extends CI_Controller
 									<p>Rp. '.number_format($items['price']).' x '.$items['qty'].'</p>
 								</div>
 							</td>
-							
 						</tr>
 					</tbody>
 				</table>
@@ -72,13 +77,16 @@ class Keranjang extends CI_Controller
 		}
 		$output .= '
 			<div class="select-total">
-                                        <span>total:</span>
-                                        <h5>Rp. '.number_format($this->cart->total()).'</h5>
-                                    </div>
-                                    <div class="select-button">
-                                        <a href="'.base_url('keranjang').'" class="primary-btn view-card">VIEW CARD</a>
-                                        <a href="'.base_url('checkout').'" class="primary-btn checkout-btn">CHECK OUT</a>
-                                    </div>
+                <span>total:</span>
+                <h5>Rp. '.number_format($this->cart->total()).'</h5>
+            </div>
+            <div class="select-button">
+                <a href="'.base_url('keranjang').'" class="primary-btn view-card">VIEW CARD</a>
+                <a href="'.base_url('checkout').'" class="primary-btn checkout-btn">CHECK OUT</a>
+            </div>
+            </div>
+                            </li>
+                            <li class="cart-price">Rp. '.number_format($this->cart->total()).'</li>
 		';
 		return $output;
 	}

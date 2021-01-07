@@ -33,9 +33,9 @@
 		
 		<div class="card-block">
 			<div class="btn-group" style="margin-bottom: 15px;">
-				<a class="btn btn-primary" href="<?= site_url() ?>back_end/kategori/add">
+				<!--<a class="btn btn-primary" href="<?= site_url() ?>back_end/kategori/add">
 					Add Data &nbsp;<i class="feather icon-plus"></i>
-				</a>
+				</a>-->
 			</div>
 
 			<?= $this->session->flashdata('pesan'); ?>

@@ -88,24 +88,8 @@
                         </form>
                     </div>
                     <div class="col-lg-3 text-right col-md-3">
-                        <ul class="nav-right">
-                            <!--
-                            <li class="heart-icon">
-                                <a href="#">
-                                    <i class="icon_heart_alt"></i>
-                                    <span>1</span>
-                                </a>
-                            </li>-->
-                            <li class="cart-icon">
-                                <a href="#">
-                                    <i class="icon_bag_alt"></i>
-                                    <span>3</span>
-                                </a>
-                                <div class="cart-hover" id="dtl_cart">
-                                    
-                                </div>
-                            </li>
-                            <li class="cart-price">Rp. <?php echo number_format($this->cart->total()); ?></li>
+                        <ul class="nav-right" id="dtl_cart">
+        
                         </ul>
                     </div>
                 </div>
