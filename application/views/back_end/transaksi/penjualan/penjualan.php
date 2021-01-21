@@ -55,7 +55,7 @@
 						foreach ($penjualan as $data):?>
 							<tr>
 								<td><?php echo $data->penjualan_id; ?></td>
-								<td><?php echo $data->penjualan_penerima; ?></td>
+								<td><?php echo substr($data->penjualan_penerima,0,10) ?></td>
 								<td><?php echo $data->penjualan_total; ?></td>
 								<td><?php echo $data->penjualan_status; ?></td>
 								<td><?php echo $data->penjualan_tgl; ?></td>

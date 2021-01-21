@@ -6,6 +6,7 @@
         $this->db->from('penjualan');
         $this->db->where('penjualan_id',$key_pesanan);
         $this->db->or_where('penjualan_telp',$key_pesanan);
+        $this->db->order_by('penjualan_tgl', 'DESC');
         return $this->db->get()->result();
     }
 

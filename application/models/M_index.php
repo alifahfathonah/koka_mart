@@ -39,6 +39,20 @@
         return $query;
     }
 
+    public function getArtikel($id = null)
+    {
+        $this->db->from('artikel');
+        $this->db->limit(3);
+        $this->db->order_by('artikel_created', 'DESC');
+
+        if($id !=null) {
+            $this->db->where('artikel_id', $id);
+        }
+
+        $query=$this->db->get();
+        return $query;
+    }
+
     //Back End
     public function hitung_produk(){
         $query = $this->db->query('SELECT COUNT(produk_id) AS tot_produk FROM produk');

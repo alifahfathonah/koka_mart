@@ -20,6 +20,7 @@
         }
 
 		$this->db->where("(penjualan_status = 'Process' OR penjualan_status = 'On The Way')");
+		$this->db->order_by('penjualan_tgl', 'DESC');
 
 		$query=$this->db->get();
 		return $query;

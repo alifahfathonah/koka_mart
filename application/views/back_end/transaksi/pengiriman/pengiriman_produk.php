@@ -56,9 +56,9 @@
 							<tr>
 								<td><?= $i++ ?></td>
 								<td><?php echo $data->penjualan_id; ?></td>
-								<td><?php echo $data->penjualan_penerima; ?></td>
+								<td><?php echo substr($data->penjualan_penerima,0,10) ?></td>
 								<td><?php echo $data->penjualan_status; ?></td>
-								<td><?php echo $data->penjualan_resi; ?></td>
+								<td><?php echo substr($data->penjualan_resi,0,15) ?></td>
 
 								<td><a class="edit" href="<?= site_url(); ?>back_end/Pengiriman_produk/edit/<?= $data->penjualan_id ?>"><button class="btn btn-success"><i class="feather icon-edit"></i></button></a></td>
 								

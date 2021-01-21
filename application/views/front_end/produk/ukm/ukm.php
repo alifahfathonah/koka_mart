@@ -5,6 +5,7 @@
             <div class="col-lg-12">
                 <div class="breadcrumb-text">
                     <a href="<?php echo base_url('Home') ?>"><i class="fa fa-home"></i> Home</a>
+                    <a href="#">Kategori</a>
                     <span>UKM</span>
                 </div>
             </div>

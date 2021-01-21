@@ -330,6 +330,11 @@
                                         <span class="pcoded-mtext">Data Master</span>
                                     </a>
                                     <ul class="pcoded-submenu">
+                                        <li class="">
+                                            <a href="<?php echo base_url('back_end/Artikel') ?>">
+                                                <span class="pcoded-mtext">Data Artikel</span>
+                                            </a>
+                                        </li>
                                         <!--<li class="">
                                             <a href="<?php echo base_url('back_end/Customer') ?>">
                                                 <span class="pcoded-mtext">Data Customer</span>

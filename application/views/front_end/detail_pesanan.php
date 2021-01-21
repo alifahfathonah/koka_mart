@@ -23,13 +23,13 @@
                 <header>
                     <div class="row">
                         <div class="col">
-                            <a target="_blank" href="https://lobianijs.com">
+                            <a target="_blank" href="#">
                                 <img style="height: 64px;" src="<?= base_url('assets/front_end/img/kokamart.png') ?>" data-holder-rendered="true" />
                             </a>
                         </div>
                         <div class="col company-details">
                             <h2 class="name">
-                                <a target="_blank" href="https://lobianijs.com">
+                                <a target="_blank" href="#">
                                     KokaMart
                                 </a>
                             </h2>

@@ -12,6 +12,7 @@
         $this->db->from('produk');
         $this->db->join('kategori', 'produk.produk_kategori_id = kategori.kategori_id', 'left');
         $this->db->where('kategori_nama', 'Premium');
+        $this->db->order_by('produk_input', 'DESC');
 
         $query = $this->db->get();
         return $query;
@@ -24,6 +25,7 @@
         $this->db->from('produk');
         $this->db->join('kategori', 'produk.produk_kategori_id = kategori.kategori_id', 'left');
         $this->db->where('kategori_nama !=', 'Premium');
+        $this->db->order_by('produk_input', 'DESC');
 
         $query = $this->db->get();
         return $query;

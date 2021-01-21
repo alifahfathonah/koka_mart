@@ -97,36 +97,28 @@
         </div>
         <div class="nav-item">
             <div class="container">
-                <!--
                 <div class="nav-depart">
                     <div class="depart-btn">
                         <i class="ti-menu"></i>
-                        <span>All departments</span>
+                        <span>Kategori</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li><a href="#">Underwear</a></li>
-                            <li><a href="#">Kid's Clothing</a></li>
-                            <li><a href="#">Brand Fashion</a></li>
-                            <li><a href="#">Accessories/Shoes</a></li>
-                            <li><a href="#">Luxury Brands</a></li>
-                            <li><a href="#">Brand Outdoor Apparel</a></li>
+                            <li><a href="<?php echo base_url('front_end/produk/Premium') ?>">Produk Premium</a></li>
+                            <li><a href="<?php echo base_url('front_end/produk/Ukm') ?>">Produk UKM</a></li>
                         </ul>
                     </div>
-                </div>-->
+                </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="<?php echo base_url('Home') ?>">Home</a></li>
-                        <li><a href="#">Kategori</a>
-                            <ul class="dropdown">
-                                <li><a href="<?php echo base_url('front_end/produk/Premium') ?>">Produk Premium</a></li>
-                                <li><a href="<?php echo base_url('front_end/produk/Ukm') ?>">Produk UKM</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="<?php echo base_url('Home') ?>">Home</a></li>
                         <li><a href="<?php echo base_url('keranjang') ?>">Keranjang</a></li>
                         <li><a href="<?php echo base_url('pesanan') ?>">Cek Pesanan Anda</a></li>
-                        <li><a href="<?php echo base_url('faq') ?>">FAQ</a></li>
-                        <li><a href="<?php echo base_url('hubungi_kami') ?>">Hubungi Kami</a></li>
+                        <li><a href="<?php echo base_url('artikel') ?>">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a>
+                            <ul class="dropdown">
+                                <li><a href="<?php echo base_url('faq') ?>">FAQ</a></li>
+                                <li><a href="<?php echo base_url('hubungi_kami') ?>">Hubungi Kami</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>

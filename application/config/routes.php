@@ -60,3 +60,4 @@ $route['faq'] = 'Home/faq';
 $route['keranjang'] = 'front_end/Keranjang';
 $route['checkout'] = 'front_end/Checkout';
 $route['pesanan'] = 'front_end/Pesanan';
+$route['artikel'] = 'front_end/Artikel';

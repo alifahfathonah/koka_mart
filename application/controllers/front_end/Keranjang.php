@@ -81,7 +81,7 @@ class Keranjang extends CI_Controller
                 <h5>Rp. '.number_format($this->cart->total()).'</h5>
             </div>
             <div class="select-button">
-                <a href="'.base_url('keranjang').'" class="primary-btn view-card">VIEW CARD</a>
+                <a href="'.base_url('keranjang').'" class="primary-btn view-card">KERANJANG</a>
                 <a href="'.base_url('checkout').'" class="primary-btn checkout-btn">CHECK OUT</a>
             </div>
             </div>

@@ -61,7 +61,7 @@
 						foreach ($ukm as $data):?>
 							<tr>
 								<td><?= $i++ ?></td>
-								<td><?php echo $data->produk_nama; ?></td>
+								<td><?php echo substr($data->produk_nama,0,20) ?></td>
 								<td align="center"><a href="<?= base_url('assets/upload/produk/'.$data->produk_img) ?>" data-fancybox data-caption="Produk UKM / Lainnya"> <img style="height: 50px; width: 50px;" src="<?= base_url('assets/upload/produk/'.$data->produk_img) ?>"></a>&nbsp;&nbsp;&nbsp;
                                         <a class="edit_img" href="<?= site_url(); ?>back_end/produk/Ukm/edit_img/<?= $data->produk_id ?>"><i class="fa fa-edit">Ganti</i></a></td>
 								<td>Rp.<?php echo number_format($data->produk_harga); ?></td>

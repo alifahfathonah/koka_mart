@@ -17,6 +17,7 @@ class Home extends CI_Controller
         $this->M_index->del_cancel();
         $data['premium']=$this->M_index->getPremium()->result();
         $data['ukm']=$this->M_index->getUkm()->result();
+        $data['artikel']=$this->M_index->getArtikel()->result();
         $this->temp->load('front_end/partials', 'front_end/index', $data);
     }
 

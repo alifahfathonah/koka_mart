@@ -5,6 +5,7 @@
         $this->db->from('penjualan');
         $this->db->join('pembayaran', 'penjualan.penjualan_id = pembayaran.pembayaran_penjualan_id', 'left');
         $this->db->where('penjualan_status', 'Waiting for Payment');
+        $this->db->order_by('penjualan_tgl', 'DESC');
 
         $query=$this->db->get();
         return $query;
